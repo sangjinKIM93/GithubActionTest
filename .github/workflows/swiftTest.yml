@@ -16,4 +16,6 @@ jobs:
     - name: Build
       run: echo Hello, Build!
     - name: Run tests
-      run: echo Go Test!
+      run: |
+         xcodebuild test -project GithubActionTest.xcodeproj -scheme GithubActionTest -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=14.4'
+         
